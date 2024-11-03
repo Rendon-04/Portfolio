@@ -1,0 +1,18 @@
+/* About Page Styling */
+.about-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
