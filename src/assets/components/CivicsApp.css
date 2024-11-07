@@ -3,11 +3,19 @@
     max-width: 1400px;
     margin: 130px auto 0; 
     padding: 30px;
-    background-color: #f9f9f9f9; 
+    background-color: #000000f9; 
     border: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
+    color: #ffffff;
     font-family: Arial, sans-serif;
+}
+
+.civics-container h2 {
+    color: white;
+}
+
+.civics-container h3 {
+    color: white;
 }
 
 .main-heading {
@@ -16,12 +24,12 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #fbf8f8;
 }
 
 .section-heading {
     font-size: 1.8rem;
-    color: #333;
+    color: #ffefef;
     font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -33,7 +41,7 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    color: #666;
+    color: #dfdfdf;
     font-size: large;
 }
 
@@ -65,7 +73,7 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    color: #666;
+    color: #dfdfdf;
     font-size: large;
     
 }
@@ -99,7 +107,7 @@
 
 .problem-section-heading{
     font-size: 1.8rem;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -113,7 +121,7 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    color: #666;
+    color: #dfdfdf;
     font-size: large; 
     margin-left: 4%; 
 }
@@ -139,36 +147,273 @@
 .testing-content{
     display: flex;
     align-items: flex-start;
+    margin-top: 2%;
 }
 
+.technical-challenges ul {
+    list-style: none;
+    margin: auto;
+
+}
+ 
+
+
 .skills-image {
-    padding: 2%;
-    width: 103%;
-    height: auto;
+    display: flex;
+    width: 103.5%;
     border-radius: 8px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     margin-bottom: 4%;
+    overflow: hidden;
 }
 
 .test-image {
-    padding: 2%;
+    display: flex;
     width: 100%;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.1);
+    margin-left: 1%;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     margin-bottom: 4%;
+    overflow: hidden;
 }
 
+.resources-images{
+    display: flex;
+    align-items: flex-start;
+}
 
+.resources-images img{
+    display: flex;
+    width: 310px;
+    align-items: center;
+    margin-left: 1%;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 4%;
+    overflow: hidden;
+}
 
 .list li {
     margin-right: 20%;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    color: #666;
+    color: #dfdfdf;
     font-size: large; 
    
 }
+
+.conclusion h2 {
+    text-align: center;
+}
+
+.conclusion p {
+    text-align: center;
+}
+
+/* Container Styling */
+.database-backend-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid layout */
+    gap: 20px; /* Space between each "card" */
+}
+
+.database-schema{
+    margin: 30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+/* Individual Section Styling */
+
+.schema-grid-outline {
+    display: grid;
+    padding: 20px;
+    border: .5px solid #fffefe; /* Grid outline border */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin: 20px;
+    background-color: #f9f9f9;
+    gap: 20px;
+}
+
+.schema-section-title {
+    font-weight: 510;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: rgb(74, 73, 73);
+}
+
+.schema-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.database-section-heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(74, 73, 73) !important; 
+    margin: 16px;
+
+}
+
+.database-schema {
+    text-align: center;
+    color: rgb(74, 73, 73);
+}
+
+.schema-intro-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.database-schema-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+}
+
+
+.schema-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex-direction: column;
+}
+
+.schema-section h3{
+    color: #333;
+}
+
+.schema-section .description{
+    color: #444;
+}
+
+.schema-section li {
+    text-align: left;
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.description {
+    font-size: 1rem;
+    color: #e4e4e4;
+    margin-bottom: 10px;
+}
+
+
+.fields-list,
+.api-endpoints,
+.frontend-features,
+.deployment-features,
+.optimization-features,
+.takeaways-list {
+    padding-left: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.fields-list li,
+.api-endpoints li,
+.frontend-features li,
+.deployment-features li,
+.optimization-features li,
+.takeaways-list li {
+    margin-bottom: 5px;
+}
+
+
+/* Card Styling */
+.backend-feature,
+.performance-optimization {
+    margin: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: auto;
+   
+}
+
+.backend-sections{
+    display: flex; 
+    color: #666;
+}
+
+.backend-sections .subheading{
+    text-align: center;
+    color: #444;
+}
+
+.frontend-backend{
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+    margin: 10px;
+}
+
+.frontend-backend-communication{
+    margin: 20px;
+}
+
+.frontend-backend-communication ul {
+    color: #e4e4e4;;
+}
+
+.deployment-version-control{
+    margin: 20px;
+}
+
+.deployment-version-control ul {
+    color: #e4e4e4;
+}
+
+/* Title Styling */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b1b1b1;
+}
+
+.key-takeaways{
+    margin-bottom: 20px;
+}
+.key-takeaways ul {
+    text-align: center;
+    list-style-type: none;
+    color: #e4e4e4;
+
+}
+
 
 @media (max-width: 768px) {
     .civics-container {

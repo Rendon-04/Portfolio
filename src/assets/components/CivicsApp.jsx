@@ -1,7 +1,11 @@
 import React from "react";
+import { useEffect } from "react";
 import './CivicsApp.css'
 
 export const CivicsApp = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div className="civics-container">
             <h1 className="main-heading">US Civics Test App</h1>
@@ -34,9 +38,7 @@ export const CivicsApp = () => {
                     <h2 className="problem-section-heading">Problem</h2>
                     <p className="problem-paragraph">
                         Preparing for the U.S. naturalization civics test can be challenging, especially for users who are unfamiliar with online study tools. 
-                        Many rely on printed study sheets and limited resources, which can be overwhelming. My goal was to build a scalable, intuitive platform 
-                        that could replace boring study materials with a responsive, interactive web app that also improves the accuracy and personalization of 
-                        studying for the civics test.
+                        Many rely on printed study sheets and limited resources, which can be overwhelming. 
                     </p>
                 </div>
 
@@ -45,14 +47,16 @@ export const CivicsApp = () => {
                 </div>
             </div>
             
+            <div className="technical-challenges">
             <h3 className="section-heading">Key Technical Challenges</h3>
             <ul className="list">
-                <li>Data Management: Efficiently managing a dataset of 100 questions and dynamically serving them to users.</li>
-                <li>User Authentication and Session Management: Creating a smooth, secure user experience that persists user sessions.</li>
-                <li>Performance: Ensuring quick load times and responsiveness, particularly with randomized test generation.</li>
-                <li>Frontend Flexibility: Building a React interface that adapts to different devices and optimizes user engagement.</li>
-                <li>Deployment and Scalability: Deploying on AWS Lightsail with continuous integration to streamline updates.</li>
+                <li>Efficiently managing a dataset of 100 questions and dynamically serving them to users.</li>
+                <li><strong> User Authentication and Session Management:</strong> Creating a smooth, secure user experience that persists user sessions.</li>
+                <li><strong>Performance:</strong> Ensuring quick load times and responsiveness, particularly with randomized test generation.</li>
+                <li><strong>Frontend Flexibility:</strong> Building a React interface that adapts to different devices and optimizes user engagement.</li>
+                <li><strong>Deployment and Scalability:</strong>  Deploying on AWS Lightsail with continuous integration to streamline updates.</li>
             </ul>
+            </div>
             <div className="testing-content">
             <div className="skills-image">
                 <img  src="src/assets/img/skills.png" alt="test" />
@@ -65,36 +69,147 @@ export const CivicsApp = () => {
             <h2 className="section-heading">Strategy and Goals</h2>
             <p className="paragraph">The core strategy was to design a Minimum Viable Product that would provide a foundation for interactive learning 
                 while establishing an iterable architecture. Key goals for this MVP included:</p>
-            <ul className="list">
-                <li>User-Focused Experience: Ensure that each study tool is approachable and can function seamlessly.</li>
-                <li>Randomized Practice Tests: Develop functionality to generate unique, randomized 10-question practice tests.</li>
-                <li>Secure and Reliable Session Handling: Use Flask sessions for user authentication and session management, providing a consistent experience across sessions.</li>
-                <li>Scalability and Efficiency: Build for the future by making the architecture extensible, accommodating potential growth in user base and content.</li>
-            </ul>
-            <div className="resources-image">
-                <img  src="src/assets/img/resources.png" alt="resources" />
+           
+            <div className="resources-images">
+                <img  src="src/assets/img/UX.png" alt="resources" />
+                <img  src="src/assets/img/scale.png" alt="resources" />
+                <img  src="src/assets/img/Qs.png" alt="resources" />
+                <img  src="src/assets/img/handling.png" alt="resources" />
             </div>
             
-            <h2 className="section-heading">Vision for Future Iterations</h2>
-            <p className="paragraph">Looking ahead, I envision future iterations that expand the app's capabilities.</p>
-            <ul className="list">
-                <li>Enhanced Personalization: Enable personalized study recommendations based on user performance in specific question categories.</li>
-                <li>Analytics and Insights: Implement analytics tools to provide insights on frequently missed questions, helping users better target their weak areas.</li>
-                <li>Extended Question Database: Add more practice questions and integrate dynamic difficulty adjustment.</li>
-                <li>Localization: Incorporate multi-language support to increase accessibility for non-native English speakers.</li>
-                <li>Progressive Web App: Transform the app into a PWA for better mobile compatibility and offline use.</li>
-            </ul>
-            
+            <div className="conclusion">
             <h2 className="section-heading">Key Learnings</h2>
-            <p className="paragraph">This project taught me valuable lessons about full-stack development and iterative improvement:</p>
-            <ul className="list">
-                <li>Frontend-Backend Data Flow: Designing data flows between React and Flask reinforced my understanding of REST APIs and JSON handling.</li>
-                <li>Session Management: Working through session persistence and authentication with Flask taught me the importance of secure session handling in web apps.</li>
-                <li>Deployment Process: Deploying on AWS Lightsail and managing updates with version control provided a practical foundation in DevOps practices.</li>
-                <li>Performance Optimization: Implementing randomized question generation on the frontend minimized server load and response times.</li>
-                <li>Importance of MVP Focus: Maintaining a narrow focus on core functionalities helped prevent feature creep and allowed for a more streamlined, achievable product.</li>
-            </ul>
-        </div>
+            <p className="paragraph">The development of the USCT App provided insights into full-stack engineering</p>
+            <div className="schema-grid-outline">
+                <h1 className="schema-section-title">Database Schema and Backend Design</h1>
+                <img src="src/assets/img/schema.png" alt="schema" className="schema-image" />
+
+                {/* Database Schema Section */}
+                <section className="database-schema">
+                    <p className="schema-intro-text">
+                        The app's backend uses PostgreSQL to handle data storage, leveraging Flask and SQLAlchemy ORM for efficient database interactions.
+                        The core tables in the database schema include Users, Scores, Question & Answers, and Test Results to support modularity and allow for future scalability.
+                    </p>
+
+                    <h2 className="database-section-heading">Database Schema</h2>
+                    
+                    <div className="database-schema-section">
+                        <div className="schema-section">
+                            <h3 className="subheading">Users Table</h3>
+                            <p className="description">
+                                Stores user information, including ID, username, email, and password.
+                            </p>
+                            <ul className="fields-list">
+                                <li>Fields: id, username, email, password</li>
+                                <li>Relationship: One-to-many relationship with the Score table, linking each user to their test scores.</li>
+                            </ul>
+                        </div>
+
+                        <div className="schema-section">
+                            <h3 className="subheading">Scores Table</h3>
+                            <p className="description">
+                                Tracks individual test scores, associating each score with a specific user and test result. This table allows users to track their progress over time.
+                            </p>
+                            <ul className="fields-list">
+                                <li>Fields: score_id, user_score, user_id, test_result</li>
+                                <li>Relationships: Many-to-one relationship with the User table & Many-to-one relationship with the TestResult table, linking each score with its related test result.</li>
+                            </ul>
+                        </div>
+
+                        <div className="schema-section">
+                            <h3 className="subheading">QuestionAnswer Table</h3>
+                            <p className="description">
+                                Stores each civics test question along with the answer choices and correct answer, allowing the app to generate multiple-choice quizzes.
+                            </p>
+                            <ul className="fields-list">
+                                <li>Fields: question_answer_id, question, answer, options</li>
+                                <li>Relationships: One-to-many relationship with the TestResult table, linking each question to multiple test results for answer validation.</li>
+                            </ul>
+                        </div>
+
+                        <div className="schema-section">
+                            <h3 className="subheading">TestResult Table</h3>
+                            <p className="description">
+                                Records whether each answer was correct or incorrect, supporting detailed tracking of user performance on individual questions.
+                            </p>
+                            <ul className="fields-list">
+                                <li>Fields: test_result_id, is_correct, question_answer_id</li>
+                                <li>Relationships: Many-to-one relationship with the QuestionAnswer table. One-to-many relationship with the Score table, linking each test result to the user's overall score.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            {/* <!-- Backend Implementation Section --> */}
+            <section className="backend-implementation">
+                <h2 className="section-heading">Backend Implementation</h2>
+                <p className="description">
+                    The backend, built with Flask, serves as an API provider to the React frontend, managing user authentication, session handling, and data retrieval.
+                </p>
+                <div className="backend-sections">
+                <div className="backend-feature">
+                    <h3 className="subheading">Session Management</h3>
+                    <p className="feature-description">
+                        Flask’s session mechanism was used to maintain user login status across sessions. The <code>/login</code>, <code>/register</code>, and <code>/logout</code> routes handle user authentication, with hashed passwords for security.
+                    </p>
+                </div>
+
+                <div className="backend-feature">
+                <h3 className="subheading">API Endpoints</h3>
+                    <p className="feature-description">
+                        RESTful endpoints were developed to handle core functionalities:
+                    </p>
+                    <ul className="api-endpoints">
+                        <li><strong>Practice Test:</strong> GET <code>/practice_test</code> fetches 10 random questions for the user’s practice test session.</li>
+                        <li><strong>Submit Practice Test:</strong> POST <code>/submit_practice_test</code> records the user’s score and saves it to the database after comparing answers.</li>
+                        <li><strong>Study Pages:</strong> GET <code>/study_for_the_test</code> renders the main study page; GET <code>/overview_study_page</code> loads study data for detailed topic reviews.</li>
+                        <li><strong>View Scores:</strong> GET <code>/view_scores</code> retrieves the user’s score history, accessible only when logged in.</li>
+                    </ul>
+                </div>
+                </div>
+            </section>
+
+            {/* <!-- Frontend-Backend Communication Section --> */}
+            <div className="frontend-backend">
+            <section className="frontend-backend-communication">
+                
+                <h2 className="section-heading">Frontend-Backend Communication</h2>
+                <p className="description">
+                    The frontend, built with React, leverages axios for API calls to the Flask backend. Key technical design decisions on the frontend include:
+                </p>
+
+                <ul className="frontend-features">
+                    <li><strong>Data Fetching and State Management:</strong> The Test component fetches questions, shuffles them on the frontend, and dynamically renders each question as a multiple-choice format.</li>
+                    <li><strong>Session and Error Handling:</strong> Simplified error handling was implemented to guide users without overwhelming them with error messages.</li>
+                </ul>
+               
+            </section>
+
+            {/* <!-- Deployment and Version Control Section --> */}
+            <section className="deployment-version-control">
+                <h2 className="section-heading">Deployment and Version Control</h2>
+                <p className="description">
+                    The app is deployed on AWS Lightsail, with PostgreSQL hosted on the same instance for simpler configuration. Deployment follows CI/CD practices, enabling streamlined updates.
+                </p>
+
+                <ul className="deployment-features">
+                    <li><strong>Git Integration:</strong> Version control is handled through Git, with commits pushed to GitHub and updates pulled by the server.</li>                 </ul>
+            </section>
+            </div>
+            {/* <!-- Key Takeaways Section --> */}
+            <section className="key-takeaways">
+                <h2 className="section-heading">Key Takeaways</h2>
+                <ul className="takeaways-list">
+                    <li><strong>Database Design Principles:</strong> Structuring the database for expansion, normalization, and clear relationships enabled smoother data management.</li>
+                    <li><strong>Data Flow and API Design:</strong> Effective communication between frontend and backend facilitated a cohesive user experience.</li>
+                    <li><strong>Session and State Management:</strong> Developing secure session handling with Flask ensured consistent state across user sessions.</li>
+                    <li><strong>Continuous Deployment:</strong> Setting up AWS Lightsail and managing deployment with Git reinforced the value of version control and CI/CD pipelines.</li>
+                </ul>
+            </section>
+        </div>        
+    </div>
+        
     );
 };
 

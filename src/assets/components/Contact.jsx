@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../img/contact-img.svg";
+import contactImg from "../img/contact2.png";
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 import "./Contact.css";
@@ -27,23 +27,46 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
-  };
+//     let response = await fetch("http://localhost:5000/contact", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json;charset=utf-8",
+//       },
+//       body: JSON.stringify(formDetails),
+//     });
+//     setButtonText("Send");
+//     let result = await response.json();
+//     setFormDetails(formInitialDetails);
+//     if (result.code == 200) {
+//       setStatus({ succes: true, message: 'Message sent successfully'});
+//     } else {
+//       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+//     }
+//   };
 
+        const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScq_5utdOlXSXDiD1yJogt1qLLRkK4qtYWRll6sZSQokbpyag/formResponse";
+
+        const formData = new FormData();
+        formData.append("entry.2143819891", formDetails.firstName); // Replace with actual entry ID for First Name
+        formData.append("entry.1359428466", formDetails.lastName);  // Replace with actual entry ID for Last Name
+        formData.append("entry.1935199198", formDetails.email);     // Replace with actual entry ID for Email
+        formData.append("entry.1551218798", formDetails.phone);     // Replace with actual entry ID for Phone
+        formData.append("entry.786254539", formDetails.message);   // Replace with actual entry ID for Message
+
+        try {
+        await fetch(googleFormURL, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors", // Prevents CORS issues
+        });
+        setButtonText("Send");
+        setFormDetails(formInitialDetails);
+        setStatus({ success: true, message: "Message sent successfully" });
+        } catch (error) {
+        setButtonText("Send");
+        setStatus({ success: false, message: "Something went wrong, please try again later." });
+        }
+        };
   return (
     <section className="contact" id="connect">
       <Container>
@@ -66,7 +89,7 @@ export const Contact = () => {
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />

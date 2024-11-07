@@ -6,7 +6,7 @@ const AboutPage = () => {
     return(
         <Container className="about-page">
             <div className="about-content">
-                <img src="/about.png" alt="About" className="about-image"/>
+                <img src="/about2.png" alt="About" className="about-image"/>
             </div>
 
         </Container>
