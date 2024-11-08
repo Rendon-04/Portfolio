@@ -1,5 +1,13 @@
 import React from "react";
 import { useEffect } from "react";
+import civicsImage from "../img/civicsImage.png";
+import study from "../img/study.png";
+import skills from "../img/skills.png";
+import test from "../img/test.png";
+import UX from "../img/UX.png";
+import scale from "../img/scale.png";
+import Qs from "../img/Qs.png";
+import handling from "../img/handling.png";
 import './CivicsApp.css'
 
 export const CivicsApp = () => {
@@ -18,7 +26,7 @@ export const CivicsApp = () => {
                 related to the naturalization process.</p>
                 </div>
                 <div className="civics-image">
-                <img  src="src/assets/img/civicsImage.png" alt="homepage" />
+                <img src={civicsImage} alt="homepage" />
             </div>
         </div>
             <h2 className="section-heading">Technologies Used</h2>
@@ -43,7 +51,7 @@ export const CivicsApp = () => {
                 </div>
 
                 <div className="study-image-content">
-                    <img  src="src/assets/img/study.png" alt="study" />
+                    <img  src={study} alt="study" />
                 </div>
             </div>
             
@@ -59,10 +67,10 @@ export const CivicsApp = () => {
             </div>
             <div className="testing-content">
             <div className="skills-image">
-                <img  src="src/assets/img/skills.png" alt="test" />
+                <img  src={skills} alt="test" />
             </div>
             <div className="test-image">
-                <img  src="src/assets/img/test.png" alt="test" />
+                <img  src={test} alt="test" />
             </div>
             </div>
             
@@ -71,10 +79,10 @@ export const CivicsApp = () => {
                 while establishing an iterable architecture. Key goals for this MVP included:</p>
            
             <div className="resources-images">
-                <img  src="src/assets/img/UX.png" alt="resources" />
-                <img  src="src/assets/img/scale.png" alt="resources" />
-                <img  src="src/assets/img/Qs.png" alt="resources" />
-                <img  src="src/assets/img/handling.png" alt="resources" />
+                <img  src={UX} alt="resources" />
+                <img  src={scale} alt="resources" />
+                <img  src={Qs} alt="resources" />
+                <img  src={handling} alt="resources" />
             </div>
             
             <div className="conclusion">
