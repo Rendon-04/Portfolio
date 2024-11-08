@@ -45,6 +45,15 @@
     font-size: large;
 }
 
+.custom-link {
+    color: rgb(13, 79, 201);
+    text-decoration: none; /* Optional: removes the underline */
+  }
+
+  .custom-link:visited {
+    color: rgb(176, 3, 176); /* Change this to your preferred color for visited links */
+  }
+
 .tech-list{
     display: flex;
     flex-direction: row;

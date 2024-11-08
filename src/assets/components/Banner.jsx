@@ -14,7 +14,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = [ "Welcome" ];
+    const toRotate = [ "SWE" ];
     const period = 2000;
   
     useEffect(() => {
@@ -59,7 +59,7 @@ export const Banner = () => {
                   {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{`Hi! I'm Ivan.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Welcome" ]'><span className="wrap">{text}</span></span></h1>
+                    <h1>{`Hi! I'm Ivan.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "SWE" ]'><span className="wrap">{text}</span></span></h1>
                       <p> As a first-generation Latino Software Engineer, I’m here to bring a fresh perspective to tech. 
                         I’m channeling my inner drive into building software that’s accessible and impactful, especially for communities that often feel left out of tech’s reach. 
                         I focus on full-stack development, crafting intuitive, easy-to-navigate apps that make a difference.</p>

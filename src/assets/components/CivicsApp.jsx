@@ -23,7 +23,7 @@ export const CivicsApp = () => {
             <p className="intro-paragraph">The U.S. Civic Test App is a web application designed to help individuals prepare for 
                 the U.S. naturalization civics test. Built with a focus on accessibility and an intuitive user experience, 
                 the app serves users with tools to study, practice, and track their progress, as well as additional resources 
-                related to the naturalization process.</p>
+                related to the naturalization process. <br></br><a href="http://54.213.207.219/" target="_blank" class="custom-link">Check it out here!</a></p>
                 </div>
                 <div className="civics-image">
                 <img src={civicsImage} alt="homepage" />
