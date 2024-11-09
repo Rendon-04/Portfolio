@@ -39,7 +39,8 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         <p>As a full-stack engineer, I focus on building accessible, impactful applications from the ground up.<br /> Here’s a snapshot of the skills I bring to every project.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        {/* <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider"> */}
+                        <div className="items">
                         <div className="item">
                             <img src={meter1} alt="Frontend Development" />
                             <h5>Frontend Development</h5>
@@ -55,16 +56,19 @@ export const Skills = () => {
                             <h5>Databases & Data Management</h5>
                             <p>PostgreSQL, SQLAlchemy</p>
                         </div>
-                        <div className="item">
-                            <img src={meter4} alt="Cloud & Deployment" />
-                            <h5>Cloud & Deployment</h5>
-                            <p>Git, AWS Lightsail</p>
+                        <div className="second-row">
+                                <div className="item">
+                                    <img src={meter4} alt="Cloud & Deployment" />
+                                    <h5>Cloud & Deployment</h5>
+                                    <p>Git, AWS Lightsail</p>
+                                </div>
+                                <div className="item">
+                                    <img src={meter5} alt="Problem-Solving & Debugging" />
+                                    <h5>Problem-Solving & Debugging</h5>
+                                </div>
+                            </div>
                         </div>
-                        <div className="item">
-                            <img src={meter5} alt="Problem-Solving & Debugging" />
-                            <h5>Problem-Solving & Debugging</h5>
-                        </div>
-                        </Carousel>
+                        {/* </Carousel> */}
                     </div>
                 </div>
             </div>

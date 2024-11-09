@@ -1,14 +1,15 @@
 /************ Skills Css ************/
 .skill {
-    padding: 0 0 50px 0;
+    padding: 0 0 30px 0;
     position: relative;
   }
   .skill-bx {
     background: #1c1b1b;
     border-radius: 64px;
     text-align: center;
-    padding: 60px 50px;
+    padding: 40px 30px;
     margin-top: -60px;
+    margin: auto;
   }
   .skill h2 {
       font-size: 45px;
@@ -19,9 +20,9 @@
       font-size: 18px;
       letter-spacing: 0.8px;
       line-height: 1.5em;
-      margin: 14px 0 75px 0;
+      margin: 10px 0 50px 0; 
   }
-  .skill-slider {
+  /* .skill-slider {
     width: 80%;
     margin:  auto;
     position: relative;
@@ -30,7 +31,8 @@
   .skill-slider .item img {
     width: 40%;
     margin: 0 auto 15px auto;
-  }
+
+  } */
   .background-image-left {
     top: 28%;
     position: absolute;
@@ -38,3 +40,44 @@
     width: 40%;
     z-index: -4;
   }
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 15px; /* Space between items */
+    justify-items: center; /* Center align items horizontally */
+    margin: 2%;
+    justify-content: center;
+  }
+  
+  .item {
+    width: 150px;
+  }
+
+  .item img {
+    width: 150px; /* Adjust emoji size */
+    margin: 0 auto 10px auto; /* Center emoji with less margin */
+}
+
+.item h5 {
+    font-size: 20px; /* Smaller font for headings */
+    margin: 10px 0; /* Adjust margin for compactness */
+}
+
+.item p {
+    font-size: 18px; /* Smaller font for paragraph */
+    line-height: 1.2;
+
+}
+
+.second-row {
+    display: flex;
+    justify-content: center; /* Centers items in the second row */
+    gap: 220px; /* Space between the two items */
+    margin-top: 20px; /* Add spacing from the first row */
+    grid-column: 1 / -1; /* Ensures the second row spans the full width */
+}
+
+.items p {
+    font-weight: 700;
+}
