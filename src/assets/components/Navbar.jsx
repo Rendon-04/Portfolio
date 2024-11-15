@@ -36,6 +36,10 @@ export const NavBar = () => {
   const handleHomeClick = () => {
     navigate('/');
     onUpdateActiveLink('home');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
