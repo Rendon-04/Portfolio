@@ -8,6 +8,7 @@ import UX from "../img/UX.png";
 import scale from "../img/scale.png";
 import Qs from "../img/Qs.png";
 import handling from "../img/handling.png";
+import schema from "../img/schema.png";
 import './CivicsApp.css'
 
 export const CivicsApp = () => {
@@ -90,7 +91,7 @@ export const CivicsApp = () => {
             <p className="paragraph">The development of the USCT App provided insights into full-stack engineering</p>
             <div className="schema-grid-outline">
                 <h1 className="schema-section-title">Database Schema and Backend Design</h1>
-                <img src="src/assets/img/schema.png" alt="schema" className="schema-image" />
+                <img src={schema} alt="schema" className="schema-image" />
 
                 {/* Database Schema Section */}
                 <section className="database-schema">
