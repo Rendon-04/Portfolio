@@ -11,6 +11,7 @@ import Projects from "./assets/components/Projects";
 import Contact from "./assets/components/Contact";
 import Footer from "./assets/components/Footer";
 import CivicsApp from './assets/components/CivicsApp.jsx';
+import TaskScheduler from './assets/components/TaskScheduler.jsx';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         } />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/civics-app" element={<CivicsApp/>} />
+        <Route path="/task-scheduler-app" element={<TaskScheduler/>} />
       </Routes>
     </div>
   );

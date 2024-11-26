@@ -58,7 +58,7 @@ export const NavBar = () => {
             <Nav.Link className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={handleHomeClick}>
               Home
             </Nav.Link>
-            {location.pathname !== '/about' && location.pathname !== '/civics-app' && (
+            {location.pathname !== '/about' && location.pathname !== '/civics-app' && location.pathname !== '/task-scheduler-app' && (
                 <>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>

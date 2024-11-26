@@ -104,6 +104,33 @@
 
 /* Problem Content */
 
+.task-problem-content-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.task-problem-section-heading{
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 4%; 
+}
+
+.task-problem-paragraph{
+    margin-top: 3%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #dfdfdf;
+    font-size: large; 
+    margin-left: 4%;
+}
+
 .problem-content-wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -149,6 +176,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 4%;
 }
+
+
 
 .problem-text-content {
     flex: 2;
@@ -265,6 +294,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .database-section-heading{
     font-size: 1.5rem;
     font-weight: bold;

@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../img/project-img1.png";
-import projImg2 from "../img/project-img2.jpg";
+import projImg2 from "../img/DashboardHome.png";
 // import projImg3 from "../img/project-img3.png";
 import colorSharp2 from "../img/color-sharp2.png";
 import 'animate.css';
@@ -18,9 +18,10 @@ export const Projects = () => {
       link:"/civics-app"
     },
     {
-      title: "Task Reminder App",
+      title: "Task Scheduler App",
       description: "Task scheduler with Twilio integration for SMS reminders",
       imgUrl: projImg2,
+      link: "/task-scheduler-app"
     },
     // {
     //   title: "Business Startup",
