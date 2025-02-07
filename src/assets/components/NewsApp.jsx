@@ -53,7 +53,6 @@ export const NewsApp = () => {
             <div className="technical-challenges">
             <h3 className="section-heading">Key Challenges</h3>
             <ul className="list">
-                <li>Efficiently managing a dataset of 100 questions and dynamically serving them to users.</li>
                 <li><strong> Balancing scope and execution:</strong> Initially, we considered integrating goal tracking but had to evaluate whether it aligned with our core mission. Over time, we realized that fostering an innovation mindset naturally ties into goal-setting and progress tracking, making it a valuable addition</li>
                 <li><strong>Optimizing fact-checking performance:</strong> We didn’t want every claim to hit an external API, so we implemented NLP-based similarity detection to reduce redundant checks.</li>
                 <li><strong>Frontend Flexibility:</strong> Presenting fact-checking results in a way that is clear and actionable was a challenge. We iterated on the UI to make insights digestible.</li>
