@@ -9,7 +9,7 @@ import Task1 from "../img/Task1.png";
 import Task2 from "../img/Task2.png";
 import Task3 from "../img/Task3.png";
 import Task4 from "../img/Task4.png";
-import './CivicsApp';
+import './CivicsApp.css'
 
 
 export const TaskSchedulerApp = () => { 

@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../img/project-img1.png";
 import projImg2 from "../img/DashboardHome.png";
-// import projImg3 from "../img/project-img3.png";
+import projImg3 from "../img/FlowHomePage.png";
 import colorSharp2 from "../img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -18,16 +18,18 @@ export const Projects = () => {
       link:"/civics-app"
     },
     {
+      title: "Flow Innovation",
+      description: "Innovative News site with Fact-cheking tool.",
+      imgUrl: projImg3,
+      link: "/news-app"
+    },
+
+    {
       title: "Task Scheduler App",
       description: "Task scheduler with Twilio integration for SMS reminders",
       imgUrl: projImg2,
       link: "/task-scheduler-app"
-    },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
+    }
   ];
 
   return (
@@ -36,13 +38,10 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
                 <p>Built with technologies like React, Flask, PostgreSQL, and API's, these projects showcase full-stack capabilities in developing web applications.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <br></br>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
@@ -57,9 +56,7 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                  </Tab.Content>
                 </Tab.Container>
-              </div>}
             </TrackVisibility>
           </Col>
         </Row>

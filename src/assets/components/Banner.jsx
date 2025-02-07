@@ -56,8 +56,7 @@ export const Banner = () => {
             <Row className="aligh-items-center">
               <Col xs={12} md={6} xl={7}>
                 <TrackVisibility>
-                  {({ isVisible }) =>
-                  <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  
                     <span className="tagline">Welcome to my Portfolio</span>
                     <h1>{`Hi! I'm Ivan.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "SWE" ]'><span className="wrap">{text}</span></span></h1>
                       <p> As a first-generation Latino Software Engineer, I’m here to bring a fresh perspective to tech. 
@@ -73,7 +72,7 @@ export const Banner = () => {
                         Let’s Get in Touch <ArrowRightCircle size={25} />
                         </button>
                         </div>
-                  </div>}
+            
                 </TrackVisibility>
               </Col>
               <Col xs={12} md={6} xl={5}>

@@ -33,7 +33,7 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
+        <div className="skill-container">
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">

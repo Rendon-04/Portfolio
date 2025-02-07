@@ -1,14 +1,21 @@
 /************ Skills Css ************/
 .skill {
-    padding: 0 0 30px 0;
+  padding: 0 0 15px 0; /* Adjust bottom padding to reduce height */
+  position: relative;
+}
+
+  .skill-container{
+    width: 900px;
     position: relative;
+    display: flex;
+    margin: 0 auto;
   }
   .skill-bx {
-    background: #1c1b1b;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 64px;
     text-align: center;
-    padding: 40px 30px;
-    margin-top: -60px;
+    padding: 20px 15px;
+    margin-top: -30px;
     margin: auto;
   }
   .skill h2 {
@@ -44,18 +51,18 @@
   .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-    gap: 15px; /* Space between items */
+    gap: 10px; /* Space between items */
     justify-items: center; /* Center align items horizontally */
     margin: 2%;
     justify-content: center;
   }
   
   .item {
-    width: 150px;
+    width: 120px;
   }
 
   .item img {
-    width: 150px; /* Adjust emoji size */
+    width: 120px; /* Adjust emoji size */
     margin: 0 auto 10px auto; /* Center emoji with less margin */
 }
 
@@ -73,8 +80,8 @@
 .second-row {
     display: flex;
     justify-content: center; /* Centers items in the second row */
-    gap: 220px; /* Space between the two items */
-    margin-top: 20px; /* Add spacing from the first row */
+    gap: 150px; /* Space between the two items */
+    margin-top: 10px; /* Add spacing from the first row */
     grid-column: 1 / -1; /* Ensures the second row spans the full width */
 }
 

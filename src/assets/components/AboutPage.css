@@ -1,18 +1,67 @@
-/* About Page Styling */
-.about-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-}
-
-.about-content {
+.about-me {
+    padding: 60px 0;
+    background-color: #121212;
+    color: #fff;
     text-align: center;
 }
 
-.about-image {
-    max-width: 100%;
-    height: auto;
+.about-text h3 {
+    font-size: 24px;
+    color: #443bc0; 
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 8px rgba(162, 155, 254, 0.8);
+}
+
+.about-me-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px;
+    
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 550px;
+    height: 550px;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    color: #a29bfe;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-background img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 40px;
+    border-radius: 20px;
 }
