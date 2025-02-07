@@ -21,7 +21,7 @@ export const NewsApp = () => {
         <div className="text-content">
             <h2 className="section-heading">Introduction</h2>
             <p className="intro-paragraph">Flow Innovation is a web application designed to empower users to uncover the truth and explore innovation 
-                through fact-checking and discovery tools. I collaborated with another Engineer on this project. <br></br><a href="https://github.com/Rendon-04/flow_innovation" target="_blank" class="custom-link">Check it out the Github repo here!</a></p>
+                through fact-checking and discovery tools. I collaborated with another Engineer on this project. <br></br><a href="https://github.com/Rendon-04/flow_innovation" target="_blank" class="custom-link">Check out the Github repo here!</a></p>
                 </div>
                 <div className="civics-image">
                 <img src={FlowHomePage} alt="homepage" />
