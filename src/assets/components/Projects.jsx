@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../img/project-img1.png";
-import projImg2 from "../img/DashboardHome.png";
+import projImg2 from "../img/ScribeLogo.png";
 import projImg3 from "../img/FlowHomePage.png";
 import colorSharp2 from "../img/color-sharp2.png";
 import 'animate.css';
@@ -19,14 +19,14 @@ export const Projects = () => {
     },
     {
       title: "Flow Innovation",
-      description: "Innovative News site with Fact-cheking tool.",
+      description: "Innovative News site with AI Fact-checking tool.",
       imgUrl: projImg3,
       link: "/news-app"
     },
 
     {
-      title: "Task Scheduler App",
-      description: "Task scheduler with Twilio integration for SMS reminders",
+      title: "CareScribe",
+      description: "An Agentic Healthcare Companion",
       imgUrl: projImg2,
       link: "/task-scheduler-app"
     }

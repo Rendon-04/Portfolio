@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import TaskSchedulerDatabase from "../img/TaskSchedulerDatabase.png";
-import DashboardTask from "../img/DashboardTask.png";
-import TwilioNotification from "../img/TwilioNotification.jpeg";
-import DashboardTaskAssigned from "../img/DashboardTaskAssigned.png";
-import DashboardDateSelect from "../img/DashboardDateSelect.png";
+import TaskSchedulerDatabase from "../img/carescribedb.png";
+import DashboardTask from "../img/ScribeLogo.png";
+import TwilioNotification from "../img/ScribePatientDashboard.png";
+import DashboardTaskAssigned from "../img/ScirbeRecording.png";
+import DashboardDateSelect from "../img/ScribeHome.png";
 import test from "../img/test.png";
-import Task1 from "../img/Task1.png";
-import Task2 from "../img/Task2.png";
-import Task3 from "../img/Task3.png";
-import Task4 from "../img/Task4.png";
+import Task1 from "../img/cs-user-focus.png";
+import Task2 from "../img/clinicianexperience.png";
+import Task3 from "../img/cs-scale.png";
+import Task4 from "../img/cs-ai-workflows.png";
 import './CivicsApp.css'
 
 
@@ -19,14 +19,16 @@ export const TaskSchedulerApp = () => {
 
     return (
         <div className="civics-container">
-            <h1 className="main-heading">Task Scheduler Web App</h1>
+            <h1 className="main-heading">CareScribe: An Agentic Healthcare Companion</h1>
             <div className="content-wrapper">
                 <div className="text-content">
                     <h2 className="section-heading">Introduction</h2>
                     <p className="intro-paragraph">
-                        The Task Scheduler Web App allows users to create, organize, and schedule tasks seamlessly.
-                        With built-in reminders powered by Twilio, users stay on top of their commitments. The app is
-                        designed for simplicity and effectiveness, providing an intuitive interface for task management.
+                    CareScribe is an AI-powered clinical companion designed to support healthcare providers during patient rounds. 
+                    The platform enables clinicians to record, review, and summarize patient encounters using real-time speech-to-text 
+                    transcription and GPT-driven summaries. By centralizing patient data, transcripts, and assistant-guided interactions into a 
+                    streamlined dashboard, CareScribe enhances documentation, reduces cognitive load, and improves clinical efficiency.
+
                     </p>
                 </div>
                 <div className="civics-image">
@@ -36,21 +38,25 @@ export const TaskSchedulerApp = () => {
             <h2 className="section-heading">Technologies Used</h2>
             <p className="paragraph">The app leverages a full-stack architecture</p>
             <div className="tech-list">
-                <p>React for the frontend</p>
+                <p>React</p>
                 <p>|</p>
-                <p>Flask for the backend</p>
+                <p>TypeScript</p>
                 <p>|</p>
-                <p>PostgreSQL for the database</p>
+                <p>FastAPI</p>
                 <p>|</p>
-                <p>Twilio API for SMS reminders</p>
+                <p>PostgreSQL</p>
+                <p>|</p>
+                <p>Azure Speech-to-Text</p>
+                <p>|</p>
+                <p>OpenAI GPT-4</p>
             </div>
 
             <div className="task-problem-content-wrapper">
                 <div className="task-problem-text-content">
                     <h2 className="task-problem-section-heading">Problem</h2>
                     <p className="task-problem-paragraph">
-                        Managing tasks and deadlines can be overwhelming, especially without a centralized system.
-                        Many users struggle to stay organized, leading to missed deadlines or forgotten tasks.
+                        Clinicians often take handwritten notes or manually input data into EMR systems during rounds, resulting in lost time, fragmented workflows, and context switiching.
+                        CareScribe creates a streamlined process by providing a centralized dashboard with AI-powered transcription and summarization features to improve clarity, effecience, and decision-making during rounds.
                     </p>
                 </div>
                 <div className="dashboard-image-content">
@@ -60,10 +66,10 @@ export const TaskSchedulerApp = () => {
             <div className="technical-challenges">
                 <h3 className="section-heading">Key Technical Challenges</h3>
                 <ul className="list">
-                    <li><strong>Task Scheduling:</strong> Ensuring tasks are aligned with strict time slots.</li>
-                    <li><strong>Twilio Integration:</strong> Sending timely SMS reminders for scheduled tasks.</li>
-                    <li><strong>Database Efficiency:</strong> Designing relationships to handle user accounts, tasks, and reminders effectively.</li>
-                    <li><strong>Frontend Responsiveness:</strong> Creating a UI that adapts well to different screen sizes.</li>
+                    <li><strong>Modular Dashboard:</strong> Dashboard that dynamically updates with selected patient data.</li>
+                    <li><strong>AI Interactions:</strong> Implementing AI to summarize/chat in a seamless and reactive interface.</li>
+                    <li><strong>Integration:</strong> Integrating Azure Speech-to-Text and OpenAI while handling failures and delays.</li>
+                    <li><strong>APIs:</strong> Structuring scalable and RESTful APIs that support agentic behavior.</li>
                 </ul>
             </div>
             <div className="testing-content">
@@ -76,7 +82,7 @@ export const TaskSchedulerApp = () => {
             </div>
             <h2 className="section-heading">Strategy and Goals</h2>
             <p className="paragraph">
-            The core strategy was to design a Minimum Viable Product that provides a foundation for efficient task management while establishing a scalable and extensible architecture. Key goals for this MVP included:
+            The core strategy behind CareScribe was to create an AI-powered clinical companion that supports providers during patient rounds by simplifying documentation, surfacing context, and enabling intelligent conversations, all while ensuring performance, reliability, and extensibility.
             </p>
             <div className="resources-images">
                 <img src={Task1} alt="resources" />
@@ -86,9 +92,13 @@ export const TaskSchedulerApp = () => {
             </div>
             <div className="conclusion">
                 <h2 className="section-heading">Key Learnings</h2>
-                <p className="paragraph">
-                    The development of the Task Scheduler App provided insights into full-stack engineering.
-                </p>
+                <ul className="list">
+                    <li>Learned how to design an AI-augmented user interface for real-time clinical use cases.</li>
+                    <li>Developed a deeper understanding of FastAPI design patterns, API security, and session-based workflows.</li>
+                    <li>Understood tradeoffs between latency vs. accuracy when integrating AI services like GPT and Azure.</li>
+                    <li>Collaborated across roles (frontend, backend, product design) to deliver a coherent user experience.</li>
+                </ul>
+               
                 <div className="schema-grid-outline">
                     <h1 className="schema-section-title">Database Schema and Backend Design</h1>
                     <img src={TaskSchedulerDatabase} alt="schema" className="task-schema-image" /> 
@@ -96,45 +106,69 @@ export const TaskSchedulerApp = () => {
                {/* Database Schema Section */}
                <section className="database-schema">
                    <p className="schema-intro-text">
-                       The app's backend uses PostgreSQL to handle data storage, leveraging Flask and SQLAlchemy ORM for efficient database interactions.
-                       The core tables in the database schema include User, Task, and Notification to support modularity and allow for future scalability.
+                   CareScribe’s backend uses PostgreSQL with FastAPI and Pydantic for schema validation, enabling structured, modular, and scalable interactions across patients, 
+                   recordings, and AI-generated transcripts. Key tables are shown below:
                    </p>
                    <h2 className="database-section-heading">Database Schema</h2>
                    <div className="database-schema-section">
                        <div className="schema-section">
-                           <h3 className="subheading">User Table</h3>
+                           <h3 className="subheading">Patient Table</h3>
                            <p className="description">
-                               Stores user information, including ID, username, email, password and phone number.
+                           Stores personal and contextual information for each patient, including latest vitals and lab results.
                            </p>
                            <ul className="fields-list">
-                               <li>Fields: id, username, email, password, phone number
-                                </li>
-                               <li>Relationship: One-to-many relationship with the Tasks table, linking each user to their tasks.
-                                </li>
+                           <li><strong>Fields:</strong> patient_id, first_name, last_name, dob, gender, room, created_at, updated_at</li>
+                           <li><strong>Relationship:</strong> One-to-many with Encounters and Transcriptions</li>
                            </ul>
                        </div>
                        <div className="schema-section">
-                           <h3 className="subheading">Task Table</h3>
+                           <h3 className="subheading">Encounter Table</h3>
                            <p className="description">
-                               Tracks individual tasks, including the task name, description, scheduled due date, and completion status.
+                           Captures patient-specific transcript entries from each clinical round, along with AI-generated summaries.
                            </p>
                            <ul className="fields-list">
-                               <li>Fields: task_id, user_id, title, description, due date, priority, status, created and updated at
-                                </li>
-                               <li>Relationships: Many-to-one relationship with the Users table, linking each task to its owner.
-                                </li>
+                           <li><strong>Fields:</strong> encounter_id, patient_id, summary, created_at</li>
+                           <li><strong>Relationship:</strong> One-to-many with Transcript Entries</li>
                            </ul>
                        </div>
                        <div className="schema-section">
-                           <h3 className="subheading">Notification Table</h3>
+                           <h3 className="subheading">Transcript Entry Table</h3>
                            <p className="description">
-                               Manages SMS reminders sent via Twilio, linked to specific tasks.
+                           Stores individual lines of dialogue or notes from a clinical encounter, timestamped for accuracy.
                            </p>
                            <ul className="fields-list">
-                               <li>Fields: reminder_task, sent
-                                </li>
-                               <li>Relationships: Many-to-one relationship with the Tasks table, linking each reminder to a specific task.
-                                </li>
+                           <li><strong>Fields:</strong> id, encounter_id, timestamp, text</li>
+                           <li><strong>Relationship:</strong> Belongs to an Encounter</li>
+                           </ul>
+                       </div>
+                       <div className="schema-section">
+                           <h3 className="subheading">Transcription Table</h3>
+                           <p className="description">
+                           Holds raw audio transcription data for patient-clinician conversations, linked to a patient and clinician.
+                           </p>
+                           <ul className="fields-list">
+                           <li><strong>Fields:</strong> id, patient_id, clinician_id, transcriptions, timestamp</li>
+                           <li><strong>Relationship:</strong> Many-to-one with Patient</li>
+                           </ul>
+                       </div>
+                       <div className="schema-section">
+                           <h3 className="subheading">Vitals Table</h3>
+                           <p className="description">
+                           Stores recent vitals such as temperature, blood pressure, and pulse.
+                           </p>
+                           <ul className="fields-list">
+                           <li><strong>Fields:</strong> id, patient_id, timestamp, temperature, bp, pulse</li>
+                           <li><strong>Relationship:</strong> One-to-one with Patient</li>
+                           </ul>
+                       </div>
+                       <div className="schema-section">
+                           <h3 className="subheading">Vitals Table</h3>
+                           <p className="description">
+                           Lab Panels Table.
+                           </p>
+                           <ul className="fields-list">
+                           <li><strong>Fields:</strong> id, patient_id, CBC (WBC, Hemoglobin, Platelets), BMP (some_fields)</li>
+                           <li><strong>Relationship:</strong> One-to-one with Patient</li>
                            </ul>
                        </div>
                    </div>
@@ -146,29 +180,48 @@ export const TaskSchedulerApp = () => {
            <section className="backend-implementation">
                <h2 className="section-heading">Backend Implementation</h2>
                <p className="description">
-                   The backend, built with Flask, serves as an API provider to the React frontend, managing user authentication, session handling, task management, and notifications using Twilio.
-               </p>
+               The backend is built with Flask and connects to MongoDB to store patient data, transcripts, and summaries. 
+               It also integrates with Azure for speech-to-text and OpenAI for generating clinical summaries and assistant responses. 
+               A RESTful API connects everything to the React frontend, allowing secure and smooth communication between the app and the AI services.               </p>
                <div className="backend-sections">
                <div className="backend-feature">
-                   <h3 className="subheading">Session Management</h3>
+               <h3 className="subheading">Encounter and Transcript API</h3>
                    <p className="feature-description">
-                      Flask's session mechanism is used to maintain user login status. The <code>/register</code>, <code>/login</code>, and <code>/logout</code> routes handle user registration, authentication, and session clearing.
-                   </p>
-               </div>
-               <div className="backend-feature">
-               <h3 className="subheading">API Endpoints</h3>
-                   <p className="feature-description">
-                       RESTful endpoints were developed to handle the core functionalities of the Task Scheduler Web App:
+                   The backend allows clinicians to create and update encounters with timestamped transcript entries. If an encounter exists for a patient, new transcripts are appended.
                    </p>
                    <ul className="api-endpoints">
-                       <li><strong>Create Task:</strong> POST <code>/tasks</code> allows users to create a new task with a title, description, due date, and priority.
-                        </li>
-                       <li><strong>Get Tasks:</strong> GET <code>/task/&lt;user_id&gt;</code> retrieves all tasks for a specific user.
-                        </li>
-                       <li><strong>Update Task:</strong> PUT <code>/tasks/&lt;task_id&gt;</code> updates the details of a task.</li>
-                               <li><strong>Delete Task:</strong> DELETE <code>/tasks/&lt;task_id&gt;</code> removes a task from the database.</li>
-                               <li><strong>Send Notification:</strong> POST <code>/notify/&lt;task_id&gt;</code> sends an SMS notification for a task using Twilio.</li>
+                   <li><strong>Create Encounter:</strong> POST logic with append-or-create strategy</li>
+                   <li><strong>Update Summary:</strong> Sets GPT-generated summary after AI processing</li>
+                   <li><strong>Fetch Transcripts:</strong> Based on latest patient interaction</li>
                   </ul>
+               </div>
+               <div className="backend-feature">
+               <h3 className="subheading">AI Summarization & Assistant Threads</h3>
+                   <p className="feature-description">
+                   The backend uses GPT (via OpenAI’s API) to:
+                   </p>
+                   <ul className="api-endpoints">
+                   <li>Summarize encounter transcripts into clinical notes</li>
+                   <li>Detect navigation intent from speech (e.g., "show me John Smith")</li>
+                   <li>Create and manage assistant chat threads tied to a patient</li>
+                  </ul>
+               </div>
+               <div className="backend-feature">
+               <h3 className="subheading">Patient Record & Vitals Monitoring</h3>
+                   <p className="feature-description">
+                   Patient data is stored in MongoDB with utilities for:
+                   </p>
+                   <ul className="api-endpoints">
+                   <li>Searching by full name with regex</li>
+                   <li>Identifying abnormal vitals (e.g., high BP, low temp)</li>
+                   <li>Returning summarized patient info on request</li>
+                  </ul>
+               </div>
+               <div className="backend-feature">
+               <h3 className="subheading">Azure Speech-to-Text</h3>
+                   <p className="feature-description">
+                   Audio recordings (.webm) are converted to .wav using FFmpeg, then passed to Azure’s Speech SDK for transcription. The resulting text is added to the patient's encounter log.
+                   </p>
                </div>
                </div>
            </section>
@@ -177,15 +230,17 @@ export const TaskSchedulerApp = () => {
            <div className="frontend-backend">
            <section className="frontend-backend-communication">
               
-               <h2 className="section-heading">Frontend-Backend Communication</h2>
+               <h2 className="section-heading">Key API Endpoints</h2>
                <p className="description">
                    The frontend, built with React, leverages axios for API calls to the Flask backend. Key technical design decisions on the frontend include:
                </p>
                <ul className="frontend-features">
-                   <li><strong>Task Management:</strong> The dashboard dynamically fetches tasks and displays them in real-time, allowing users to interact with their schedules seamlessly.
-                    </li>
-                   <li><strong>Error Handling:</strong> Simplified error handling ensures users receive clear feedback for invalid actions or server issues.
-                </li>
+               <li><strong>POST</strong> <code>/encounter</code> – create or append to a transcript</li>
+               <li><strong>GET</strong> <code>/summary/&lt;patient_id&gt;</code> – retrieve latest summary</li>
+               <li><strong>POST</strong> <code>/generate-summary</code> – run GPT summary</li>
+               <li><strong>POST</strong> <code>/assistant-thread</code> – create assistant thread</li>
+               <li><strong>POST</strong> <code>/send-message</code> – send chat message to AI</li>
+               <li><strong>GET</strong> <code>/patients/abnormal</code> – get patients with abnormal vitals</li>
                </ul>  
            </section>
         
@@ -194,9 +249,21 @@ export const TaskSchedulerApp = () => {
             <section className="key-takeaways">
                <h2 className="section-heading">Key Takeaways</h2>
                <ul className="takeaways-list">
-                  <li><strong>Database Design Principles:</strong> Structuring the database with clear relationships facilitated task and reminder management.</li>
-                   <li><strong>API Design:</strong> Effective endpoint design ensured smooth communication between frontend and backend.</li>
-                   <li><strong>Twilio Integration:</strong> Gained valuable experience implementing third-party APIs to solve real-world challenges.</li>                </ul>
+                <li>
+                <strong>Modular API Design:</strong> Designed RESTful endpoints that allowed real-time updates between patient data, encounters, and AI insights, keeping frontend and backend loosely coupled but tightly integrated.
+                </li>
+                <li>
+                <strong>AI Workflow Integration:</strong> Learned how to orchestrate clinical data into GPT-powered summaries and assistant interactions using OpenAI's multi-threaded architecture and prompt engineering.
+                </li>
+                <li>
+                <strong>Cloud-Based Transcription:</strong> Gained hands-on experience integrating Azure Speech-to-Text with custom audio preprocessing to transcribe real-world clinical audio data.
+                </li>
+                <li>
+                <strong>NoSQL Schema Strategy:</strong> Applied document-based modeling in MongoDB to support nested transcript entries, flexible patient vitals, and dynamic AI-generated content.
+                </li>
+                <li>
+                <strong>Clinical Context Awareness:</strong> Developed functionality to detect abnormal vitals and intelligently surface key patient information to aid clinical decision-making.
+                </li>              </ul>
            </section>
            </div>
         </div>
